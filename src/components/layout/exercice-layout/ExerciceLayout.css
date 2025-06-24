@@ -1,0 +1,13 @@
+section.exercice-layout {
+  > header > h2 {
+    margin: 0;
+  }
+
+  > header, footer {
+    padding: 0.5em;
+  }
+
+  > section {
+    padding: 0.5em 1em;
+  }
+}

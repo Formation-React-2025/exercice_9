@@ -1,0 +1,38 @@
+button.label-button {
+  position: relative;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 1em;
+  border: solid 1px black;
+  border-radius: 4px;
+
+  background-color: white;
+
+  padding: 0.5em 1em;
+
+  &:hover {
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0,.4) 0 3px 10px -3px;
+  }
+
+  > span.button-ripple {
+    position: absolute; /* The absolute position we mentioned earlier */
+
+    border-radius: 50%;
+    transform: scale(0);
+    animation: button-ripple 600ms linear;
+    background-color: rgba(0, 0, 0, 0.25);
+  }
+}
+
+@keyframes button-ripple {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}

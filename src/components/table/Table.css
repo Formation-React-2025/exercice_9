@@ -1,0 +1,18 @@
+table {
+  min-width: 100%;
+  border-collapse: collapse;
+  border-spacing: 10px;
+
+  thead, tbody, tr, th, td {
+    border: solid 1px black;
+
+  }
+
+  th, td {
+    padding: 0.5em;
+  }
+
+  td.action {
+    text-align: center;
+  }
+}

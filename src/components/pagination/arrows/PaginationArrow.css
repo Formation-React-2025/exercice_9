@@ -1,0 +1,28 @@
+.pagination-arrow {
+    min-width: 2rem;
+    width: 2rem;
+    max-width: 2rem;
+    min-height: 2rem;
+    height: 2rem;
+    max-height: 2rem;
+
+    padding: 0;
+
+    border: none;
+    border-radius: 50%;
+
+    background-color: transparent;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    &:not(:disabled) {
+        cursor: pointer;
+    }
+}
+
+.pagination-arrow:hover:not(:disabled) {
+    color: blue;
+}

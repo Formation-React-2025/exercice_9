@@ -1,0 +1,78 @@
+.input-text {
+    padding: 0 0 calc(1em * 15 / 16) 0;
+    position: relative;
+
+    &.error {
+        margin-bottom: 0;
+
+        > fieldset {
+            border-color: red;
+
+            > legend {
+                color: red;
+            }
+        }
+
+        > .error-info {
+            color: red;
+            font-size: 0.75em;
+            line-height: calc(1em + 0.25em);
+            position: absolute;
+            bottom: 0;
+            z-index: 1;
+        }
+    }
+
+    > fieldset {
+        position: relative;
+        margin: 0;
+        border: solid 1px black;
+        border-radius: 4px;
+        padding-block: 0;
+        padding-inline: 0;
+
+        > legend {
+            position: absolute;
+            top: 0.5em;
+            left: calc(0.5em - 0.125em);
+            transition:
+                    font-size 0.4s ease-in-out,
+                    padding 0.4s ease-in-out,
+                    top 0.4s ease-in-out;
+            z-index: 0;
+            padding: 0 0.125em;
+
+            font-family: Roboto, sans-serif;
+            font-size: 1em;
+            font-weight: normal;
+            background: white;
+
+            &.legend-required::after {
+                    content: ' *';
+                    color: red;
+            }
+        }
+
+        > input {
+            position: relative;
+            z-index: 1;
+            background-color: transparent;
+            font-family: Roboto, sans-serif;
+            font-size: 1em;
+            font-weight: normal;
+            padding: 0.5em;
+            border: 0;
+            outline: none;
+        }
+    }
+
+    &.input-text-focused {
+        > fieldset {
+            > legend {
+                top: calc(-0.5em - 0.125em);
+                padding: 0 0.25em;
+                font-size: 0.75em;
+            }
+        }
+    }
+}

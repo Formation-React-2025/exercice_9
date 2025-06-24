@@ -1,0 +1,36 @@
+.pagination-item {
+    min-width: 2rem;
+    width: 2rem;
+    max-width: 2rem;
+
+    min-height: 2rem;
+    height: 2rem;
+    max-height: 2rem;
+
+    padding: 0;
+
+    border: none;
+    border-radius: 50%;
+
+    font-family: 'Source sans Pro', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 24px;
+    text-align: center;
+
+    cursor: pointer;
+
+    &.active {
+        background-color: blue;
+        color: white;
+    }
+
+    &:not(.active) {
+        background-color: transparent;
+        text-decoration: underline;
+    }
+}
+
+.pagination-item:not(.active):hover {
+    color: blue;
+}
